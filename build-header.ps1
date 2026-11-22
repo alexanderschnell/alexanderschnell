@@ -193,8 +193,8 @@ $d0 = 0.5; $d1 = 1.5; $wipe = 740
 $decode = "values=`"0;0;$wipe;$wipe`" keyTimes=`"0;$(KT $d0);$(KT $d1);1`""
 
 # ---------------- status line ----------------
-$status = "<text x=`"$($X0 + 34)`" y=`"452`" font-size=`"13`" fill=`"$LBL`" xml:space=`"preserve`">|  CONNECTED  |  <tspan>SYSTEM AVAILABLE</tspan></text>"
-$statusAb = "<g opacity=`"0`">$(Show-Window $abendT $okT)<rect x=`"$($X0 + 160)`" y=`"439`" width=`"200`" height=`"18`" fill=`"#000`"/><text x=`"$($X0 + 166)`" y=`"452`" font-size=`"13`" font-weight=`"700`" fill=`"$RED`">X SYSTEM  ABEND S0C7</text></g>"
+$status = "<text x=`"$($X0 + 70)`" y=`"452`" font-size=`"13`" fill=`"$LBL`" xml:space=`"preserve`">|  CONNECTED  |  <tspan>SYSTEM AVAILABLE</tspan></text>"
+$statusAb = "<g opacity=`"0`">$(Show-Window $abendT $okT)<rect x=`"$($X0 + 196)`" y=`"439`" width=`"200`" height=`"18`" fill=`"#000`"/><text x=`"$($X0 + 202)`" y=`"452`" font-size=`"13`" font-weight=`"700`" fill=`"$RED`">X SYSTEM  ABEND S0C7</text></g>"
 $flash = "<rect x=`"16`" y=`"140`" width=`"968`" height=`"285`" fill=`"$RED`" opacity=`"0`"><animate attributeName=`"opacity`" dur=`"$DUR`" repeatCount=`"indefinite`" values=`"0;0;.32;.04;.22;0;0`" keyTimes=`"0;$(KT $abendT);$(KT ($abendT + 0.08));$(KT ($abendT + 0.2));$(KT ($abendT + 0.3));$(KT ($abendT + 0.7));1`"/></rect>"
 
 # ---------------- assemble ----------------
@@ -262,11 +262,11 @@ $($script:body)    $cursorSvg
 
   <!-- status line -->
   <line x1="40" y1="432" x2="960" y2="432" stroke="#1a2f55"/>
-  <rect x="$($X0 - 3)" y="440" width="24" height="16" fill="$LBL"/>
-  <text x="$($X0 + 1)" y="452" font-size="13" font-weight="700" fill="#060a14">4A</text>
+  <rect x="$($X0 - 3)" y="440" width="60" height="16" fill="$LBL"/>
+  <text x="$($X0 + 1)" y="452" font-size="13" font-weight="700" fill="#060a14">STATUS</text>
   $status
   $statusAb
-  <text x="948" y="452" text-anchor="end" font-size="13" fill="$LBL" xml:space="preserve">&#127809;  DATE $julian   024/001</text>
+  <text x="948" y="452" text-anchor="end" font-size="13" fill="$LBL" xml:space="preserve">&#127809;  DATE $julian</text>
 
   <!-- crt effects -->
   <rect x="16" y="16" width="968" height="448" fill="url(#scan)" pointer-events="none"/>

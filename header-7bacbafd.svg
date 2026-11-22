@@ -132,11 +132,11 @@
 
   <!-- status line -->
   <line x1="40" y1="432" x2="960" y2="432" stroke="#1a2f55"/>
-  <rect x="49" y="440" width="24" height="16" fill="#7aa2ff"/>
-  <text x="53" y="452" font-size="13" font-weight="700" fill="#060a14">4A</text>
-  <text x="86" y="452" font-size="13" fill="#7aa2ff" xml:space="preserve">|  CONNECTED  |  <tspan>SYSTEM AVAILABLE</tspan></text>
-  <g opacity="0"><animate attributeName="opacity" dur="35.5s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.4995;0.6572"/><rect x="212" y="439" width="200" height="18" fill="#000"/><text x="218" y="452" font-size="13" font-weight="700" fill="#ff4b4b">X SYSTEM  ABEND S0C7</text></g>
-  <text x="948" y="452" text-anchor="end" font-size="13" fill="#7aa2ff" xml:space="preserve">&#127809;  DATE 2026.326   024/001</text>
+  <rect x="49" y="440" width="60" height="16" fill="#7aa2ff"/>
+  <text x="53" y="452" font-size="13" font-weight="700" fill="#060a14">STATUS</text>
+  <text x="122" y="452" font-size="13" fill="#7aa2ff" xml:space="preserve">|  CONNECTED  |  <tspan>SYSTEM AVAILABLE</tspan></text>
+  <g opacity="0"><animate attributeName="opacity" dur="35.5s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.4995;0.6572"/><rect x="248" y="439" width="200" height="18" fill="#000"/><text x="254" y="452" font-size="13" font-weight="700" fill="#ff4b4b">X SYSTEM  ABEND S0C7</text></g>
+  <text x="948" y="452" text-anchor="end" font-size="13" fill="#7aa2ff" xml:space="preserve">&#127809;  DATE 2026.326</text>
 
   <!-- crt effects -->
   <rect x="16" y="16" width="968" height="448" fill="url(#scan)" pointer-events="none"/>
