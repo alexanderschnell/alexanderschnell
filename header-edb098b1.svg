@@ -74,8 +74,6 @@
     <animate attributeName="x" dur="35.5s" repeatCount="indefinite" values="42;42;782;782" keyTimes="0;0.0141;0.0423;1"/>
     <animate attributeName="opacity" dur="35.5s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.0141;0.0423"/>
   </rect>
-  <text x="54" y="131" font-size="14" fill="#2a4f8a" letter-spacing="2.5" opacity="0"><animate attributeName="opacity" dur="35.5s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.0003;0.0423"/>// DECODING EBCDIC  C1=A  D3=L  C5=E  E7=X ...</text>
-  <text x="54" y="131" font-size="14" fill="#2a4f8a" letter-spacing="2.5" opacity="0"><animate attributeName="opacity" dur="35.5s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.0423;0.9986"/>// COBOL  &#183;  JCL  &#183;  ASGARD TERMINAL  &#183;  JAVA  &#183;  C  &#183;  WEB</text>
   <text x="948" y="104" text-anchor="end" font-size="13" fill="#7aa2ff">TSO / JES2</text>
   <text x="948" y="122" text-anchor="end" font-size="13" fill="#fff35c">&#127809; CANADA</text>
 

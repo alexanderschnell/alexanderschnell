@@ -248,8 +248,6 @@ $($script:defs)</defs>
     <animate attributeName="x" dur="$DUR" repeatCount="indefinite" values="$($X0 - 10);$($X0 - 10);$($X0 - 10 + $wipe);$($X0 - 10 + $wipe)" keyTimes="0;$(KT $d0);$(KT $d1);1"/>
     <animate attributeName="opacity" dur="$DUR" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;$(KT $d0);$(KT $d1)"/>
   </rect>
-  <text x="$($X0 + 2)" y="131" font-size="14" fill="$DIM" letter-spacing="2.5" opacity="0">$(Show-Window 0.01 $d1)// DECODING EBCDIC  C1=A  D3=L  C5=E  E7=X ...</text>
-  <text x="$($X0 + 2)" y="131" font-size="14" fill="$DIM" letter-spacing="2.5" opacity="0">$(Show-Window $d1 '{{E3}}')// COBOL  &#183;  JCL  &#183;  ASGARD TERMINAL  &#183;  JAVA  &#183;  C  &#183;  WEB</text>
   <text x="948" y="104" text-anchor="end" font-size="13" fill="$LBL">TSO / JES2</text>
   <text x="948" y="122" text-anchor="end" font-size="13" fill="$YEL">&#127809; CANADA</text>
 
