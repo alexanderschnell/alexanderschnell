@@ -159,7 +159,7 @@ $tm = Reveal @(@('ROLE    ===> ', $CYN), @('FSWEP MAINFRAME DEVELOPER', $WHT), @
 $tm = Reveal @(@('STUDY   ===> ', $CYN), @('COMPUTER ENGINEERING TECHNOLOGY - COMPUTING SCIENCE', $WHT)) (& $L $i) $tm $OUT_CPS; $i++; $tm += 0.3
 $ly = & $L $i
 $tm = Reveal @(,@('STACK   ===> ', $CYN)) $ly $tm $OUT_CPS; $tm += 0.1
-$chips = @( @('COBOL','#ff79c6'), @('JCL','#5ad1ff'), @('JAVA','#f0a040'), @('C','#a8b9cc'), @('PHP','#8892f0'), @('JAVASCRIPT','#fff35c'), @('CSS','#b07cff') )
+$chips = @( @('COBOL','#ff79c6'), @('JCL','#5ad1ff'), @('JAVA','#f0a040'), @('C','#a8b9cc'), @('JAVASCRIPT','#fff35c'), @('CSS','#b07cff') )
 $cx = $X0 + 13 * $ADV
 foreach ($c in $chips) {
     $cw = $c[0].Length * 8.6 + 30
@@ -200,7 +200,7 @@ $flash = "<rect x=`"16`" y=`"140`" width=`"968`" height=`"285`" fill=`"$RED`" op
 # ---------------- assemble ----------------
 $SW = 1000; $SH = 480
 $svg = @"
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 $SW $SH" width="$SW" height="$SH" font-family="$FONT" font-size="$FS" role="img" aria-label="Alex Schnell - FSWEP Mainframe Developer at Employment and Social Development Canada, writing COBOL and JCL on the mainframe through the Asgard terminal. Also Java, C, PHP, JavaScript, CSS.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 $SW $SH" width="$SW" height="$SH" font-family="$FONT" font-size="$FS" role="img" aria-label="Alex Schnell - FSWEP Mainframe Developer at Employment and Social Development Canada, writing COBOL and JCL on the mainframe through the Asgard terminal. Also Java, C, JavaScript, CSS.">
 <title>Alex Schnell - COBOL and JCL on the mainframe</title>
 <style>
   .blink rect { animation: blink 1s steps(1) infinite; }
