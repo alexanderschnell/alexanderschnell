@@ -121,7 +121,7 @@ $cursorSvg = "<g class=`"blink`" opacity=`"0`"><animate attributeName=`"opacity`
 # ---------------- assemble ----------------
 $SW = 1000; $SH = 480
 $svg = @"
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 $SW $SH" width="$SW" height="$SH" font-family="$FONT" font-size="$FS" role="img" aria-label="Alex Schnell - FSWEP Mainframe Developer at Employment and Social Development Canada, writing COBOL and JCL on the mainframe through a 3270 terminal. Also Java, C, PHP, JavaScript, CSS.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 $SW $SH" width="$SW" height="$SH" font-family="$FONT" font-size="$FS" role="img" aria-label="Alex Schnell - FSWEP Mainframe Developer at Employment and Social Development Canada, writing COBOL and JCL on the mainframe through the Asgard terminal. Also Java, C, PHP, JavaScript, CSS.">
 <title>Alex Schnell - COBOL and JCL on the mainframe</title>
 <style>
   .blink rect { animation: blink 1s steps(1) infinite; }
@@ -152,7 +152,7 @@ $($script:defs)</defs>
   <rect x="16" y="16" width="968" height="38" fill="#0a1020"/>
   <line x1="16" y1="54" x2="984" y2="54" stroke="#1a2f55"/>
   <circle cx="44" cy="35" r="6.5" fill="#ff5f57"/><circle cx="66" cy="35" r="6.5" fill="#febc2e"/><circle cx="88" cy="35" r="6.5" fill="#3d8bff"/>
-  <text x="500" y="40" text-anchor="middle" font-size="13" fill="#6f8fbf">TN3270  -  SESSION A  -  MODEL 2  (24 x 80)</text>
+  <text x="500" y="40" text-anchor="middle" font-size="13" fill="#6f8fbf">ASGARD  -  SESSION A</text>
   <circle class="dot" cx="890" cy="35" r="4" fill="$GRN" filter="url(#glow)"/>
   <text x="900" y="40" font-size="12" fill="$GRN" letter-spacing="1">ONLINE</text>
 
@@ -162,7 +162,7 @@ $($script:defs)</defs>
     <text class="gb" x="$X0" y="106" font-size="54" font-weight="800" fill="#00e5ff" letter-spacing="3">ALEX SCHNELL</text>
     <text x="$X0" y="106" font-size="54" font-weight="800" fill="$GRN" letter-spacing="3" filter="url(#bigglow)">ALEX SCHNELL</text>
   </g>
-  <text x="$($X0 + 2)" y="131" font-size="14" fill="$DIM" letter-spacing="2.5">// COBOL  &#183;  JCL  &#183;  3270 TERMINAL  &#183;  JAVA  &#183;  C  &#183;  WEB</text>
+  <text x="$($X0 + 2)" y="131" font-size="14" fill="$DIM" letter-spacing="2.5">// COBOL  &#183;  JCL  &#183;  ASGARD TERMINAL  &#183;  JAVA  &#183;  C  &#183;  WEB</text>
   <text x="948" y="104" text-anchor="end" font-size="13" fill="$BLU">TSO / JES2</text>
   <text x="948" y="122" text-anchor="end" font-size="13" fill="$YEL">CANADA</text>
 
