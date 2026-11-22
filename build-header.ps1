@@ -18,8 +18,8 @@ $OUT_CPS  = 0.010     # seconds per system-output char
 $FONT     = "'IBM Plex Mono','JetBrains Mono','Cascadia Code',Consolas,'Courier New',monospace"
 
 # classic 3270 palette
-$GRN = '#4af626'; $TRQ = '#40e0d0'; $WHT = '#f2f2f2'; $YEL = '#fff35c'
-$BLU = '#7aa2ff'; $PNK = '#ff79c6'; $RED = '#ff4b4b'; $DIM = '#2f8f3a'
+$GRN = '#3d8bff'; $TRQ = '#5ad1ff'; $WHT = '#f2f2f2'; $YEL = '#fff35c'
+$BLU = '#7aa2ff'; $PNK = '#ff79c6'; $RED = '#ff4b4b'; $DIM = '#2a4f8a'
 
 # ---------------- helpers ----------------
 function F($n) { '{0:0.####}' -f $n }
@@ -90,7 +90,7 @@ $tm = Reveal @(@('STUDY ===> ', $TRQ), @('COMPUTER ENGINEERING TECHNOLOGY - COMP
 $tm = Reveal @(,@('STACK ===> ', $TRQ)) $ly $tm $OUT_CPS -NoCursor; $tm += 0.1
 
 # language chips pop in one by one
-$chips = @( @('COBOL','#ff79c6'), @('JCL','#40e0d0'), @('JAVA','#f0a040'), @('C','#a8b9cc'), @('PHP','#8892f0'), @('JAVASCRIPT','#fff35c'), @('CSS','#b07cff') )
+$chips = @( @('COBOL','#ff79c6'), @('JCL','#5ad1ff'), @('JAVA','#f0a040'), @('C','#a8b9cc'), @('PHP','#8892f0'), @('JAVASCRIPT','#fff35c'), @('CSS','#b07cff') )
 $cx = $X0 + 11 * $ADV
 foreach ($c in $chips) {
     $cw = $c[0].Length * 8.6 + 30
@@ -138,8 +138,8 @@ $svg = @"
 <defs>
   <filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <filter id="bigglow" x="-10%" y="-60%" width="120%" height="220%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#1fae2e"/><stop offset="1" stop-color="#7dff5a"/></linearGradient>
-  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07130b"/><stop offset="1" stop-color="#030805"/></linearGradient>
+  <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#1f5fd6"/><stop offset="1" stop-color="#7cc4ff"/></linearGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#060a14"/><stop offset="1" stop-color="#000000"/></linearGradient>
   <radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
   <linearGradient id="band" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="$GRN" stop-opacity="0"/><stop offset=".5" stop-color="$GRN" stop-opacity=".07"/><stop offset="1" stop-color="$GRN" stop-opacity="0"/></linearGradient>
   <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1.4" fill="#000" fill-opacity=".35"/></pattern>
@@ -147,12 +147,12 @@ $svg = @"
 $($script:defs)</defs>
 
 <!-- window -->
-<rect x="16" y="16" width="968" height="448" rx="14" fill="url(#bg)" stroke="#1d4d26" stroke-width="1.5"/>
+<rect x="16" y="16" width="968" height="448" rx="14" fill="url(#bg)" stroke="#1a2f55" stroke-width="1.5"/>
 <g clip-path="url(#win)">
-  <rect x="16" y="16" width="968" height="38" fill="#0c1f12"/>
-  <line x1="16" y1="54" x2="984" y2="54" stroke="#1d4d26"/>
+  <rect x="16" y="16" width="968" height="38" fill="#0a1020"/>
+  <line x1="16" y1="54" x2="984" y2="54" stroke="#1a2f55"/>
   <circle cx="44" cy="35" r="6.5" fill="#ff5f57"/><circle cx="66" cy="35" r="6.5" fill="#febc2e"/><circle cx="88" cy="35" r="6.5" fill="#28c840"/>
-  <text x="500" y="40" text-anchor="middle" font-size="13" fill="#6fae78">TN3270  -  SESSION A  -  MODEL 2  (24 x 80)</text>
+  <text x="500" y="40" text-anchor="middle" font-size="13" fill="#6f8fbf">TN3270  -  SESSION A  -  MODEL 2  (24 x 80)</text>
   <circle class="dot" cx="890" cy="35" r="4" fill="$GRN" filter="url(#glow)"/>
   <text x="900" y="40" font-size="12" fill="$GRN" letter-spacing="1">ONLINE</text>
 
@@ -173,9 +173,9 @@ $($script:body)    $cursorSvg
   </g>
 
   <!-- 3270 operator information area -->
-  <line x1="40" y1="432" x2="960" y2="432" stroke="#1d4d26"/>
+  <line x1="40" y1="432" x2="960" y2="432" stroke="#1a2f55"/>
   <rect x="$($X0 - 3)" y="440" width="24" height="16" fill="$BLU"/>
-  <text x="$($X0 + 1)" y="452" font-size="13" font-weight="700" fill="#07130b">4A</text>
+  <text x="$($X0 + 1)" y="452" font-size="13" font-weight="700" fill="#060a14">4A</text>
   <text x="$($X0 + 34)" y="452" font-size="13" fill="$BLU" xml:space="preserve">|  CONNECTED  |  SYSTEM AVAILABLE</text>
   <text x="948" y="452" text-anchor="end" font-size="13" fill="$BLU">MAXCC=0000   024/001</text>
 
