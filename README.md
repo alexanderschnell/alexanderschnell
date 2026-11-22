@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="./header-db6d9b60.svg" alt="Alex Schnell - FSWEP Mainframe Developer at ESDC, writing COBOL and JCL on the mainframe through the Asgard terminal. Also Java, C, PHP, JavaScript, CSS." width="100%"/>
+  <img src="./header-78154258.svg" alt="Alex Schnell - FSWEP Mainframe Developer at ESDC, writing COBOL and JCL on the mainframe through the Asgard terminal. Also Java, C, PHP, JavaScript, CSS." width="100%"/>
 </p>
