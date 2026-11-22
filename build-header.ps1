@@ -107,7 +107,7 @@ $src = @(
     @(@('000100 ', $DIM), @('IDENTIFICATION DIVISION.', $CYN)),
     @(@('000200 ', $DIM), @('PROGRAM-ID. ', $CYN), @('PROFILE', $WHT), @('.', $CYN)),
     @(@('000300 ', $DIM), @('PROCEDURE DIVISION.', $CYN)),
-    @(@('000400 ', $DIM), @('    DISPLAY ', $LBL), @("'ALEX SCHNELL'", $YEL), @('.', $LBL)),
+    @(@('000400 ', $DIM), @('    DISPLAY ', $LBL), @("'ALEXANDER SCHNELL'", $YEL), @('.', $LBL)),
     @(@('000500 ', $DIM), @('    DISPLAY ', $LBL), @("'FSWEP MAINFRAME DEVELOPER'", $YEL), @('.', $LBL)),
     @(@('000600 ', $DIM), @('    STOP RUN.', $LBL))
 )
@@ -154,7 +154,7 @@ End-Scene 'E2' $tm; $tm += 0.25; $script:curEnd = '{{E3}}'
 # ================= SCENE 3: SYSOUT =================
 $i = 1
 $tm = Reveal @(,@("------------ SYSOUT  ALEXPROF  JOB$jobNo2  RC=0000 ------------", $DIM)) (& $L $i) $tm 0.004; $i++; $tm += 0.2
-$tm = Reveal @(@('NAME    ===> ', $CYN), @('ALEX SCHNELL', $YEL)) (& $L $i) $tm 0.02; $i++; $tm += 0.3
+$tm = Reveal @(@('NAME    ===> ', $CYN), @('ALEXANDER SCHNELL', $YEL)) (& $L $i) $tm 0.02; $i++; $tm += 0.3
 $tm = Reveal @(@('ROLE    ===> ', $CYN), @('FSWEP MAINFRAME DEVELOPER', $WHT), @(' @ EMPLOYMENT AND SOCIAL DEV. CANADA', $BLU0)) (& $L $i) $tm $OUT_CPS; $i++; $tm += 0.3
 $tm = Reveal @(@('STUDY   ===> ', $CYN), @('COMPUTER ENGINEERING TECHNOLOGY - COMPUTING SCIENCE', $WHT)) (& $L $i) $tm $OUT_CPS; $i++; $tm += 0.3
 $ly = & $L $i
@@ -188,7 +188,7 @@ $cursorSvg = "<g class=`"blink`" opacity=`"0`"><animate attributeName=`"opacity`
   "<animate attributeName=`"y`" dur=`"$DUR`" repeatCount=`"indefinite`" calcMode=`"discrete`" values=`"$($cyv -join ';')`" keyTimes=`"$($ck -join ';')`"/></rect></g>"
 
 # ---------------- EBCDIC decode of the title ----------------
-$hex = 'C1 D3 C5 E7 40 E2 C3 C8 D5 C5 D3 D3'   # "ALEX SCHNELL" in EBCDIC
+$hex = 'C1 D3 C5 E7 C1 D5 C4 C5 D9 40 E2 C3 C8 D5 C5 D3 D3'   # "ALEXANDER SCHNELL" in EBCDIC
 $d0 = 0.5; $d1 = 1.5; $wipe = 740
 $decode = "values=`"0;0;$wipe;$wipe`" keyTimes=`"0;$(KT $d0);$(KT $d1);1`""
 
@@ -200,8 +200,8 @@ $flash = "<rect x=`"16`" y=`"140`" width=`"968`" height=`"285`" fill=`"$RED`" op
 # ---------------- assemble ----------------
 $SW = 1000; $SH = 480
 $svg = @"
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 $SW $SH" width="$SW" height="$SH" font-family="$FONT" font-size="$FS" role="img" aria-label="Alex Schnell - FSWEP Mainframe Developer at Employment and Social Development Canada, writing COBOL and JCL on the mainframe through the Asgard terminal. Also Java, C, C++, JavaScript, LLMs.">
-<title>Alex Schnell - COBOL and JCL on the mainframe</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 $SW $SH" width="$SW" height="$SH" font-family="$FONT" font-size="$FS" role="img" aria-label="Alexander Schnell - FSWEP Mainframe Developer at Employment and Social Development Canada, writing COBOL and JCL on the mainframe through the Asgard terminal. Also Java, C, C++, JavaScript, LLMs.">
+<title>Alexander Schnell - COBOL and JCL on the mainframe</title>
 <style>
   .blink rect { animation: blink 1s steps(1) infinite; }
   @keyframes blink { 50% { opacity: 0; } }
@@ -238,11 +238,11 @@ $($script:defs)</defs>
   <text x="900" y="40" font-size="12" fill="$BLU0" letter-spacing="1">ONLINE</text>
 
   <!-- title: EBCDIC hex decodes into the name -->
-  <g clip-path="url(#hexclip)"><text x="$X0" y="102" font-size="34" font-weight="700" fill="$DIM" letter-spacing="0" xml:space="preserve">$hex</text></g>
+  <g clip-path="url(#hexclip)"><text x="$X0" y="100" font-size="23" font-weight="700" fill="$DIM" letter-spacing="0" xml:space="preserve">$hex</text></g>
   <g clip-path="url(#titleclip)"><g class="flicker">
-    <text class="ga" x="$X0" y="106" font-size="54" font-weight="800" fill="#ff2e63" letter-spacing="3">ALEX SCHNELL</text>
-    <text class="gb" x="$X0" y="106" font-size="54" font-weight="800" fill="#00e5ff" letter-spacing="3">ALEX SCHNELL</text>
-    <text x="$X0" y="106" font-size="54" font-weight="800" fill="$BLU0" letter-spacing="3" filter="url(#bigglow)">ALEX SCHNELL</text>
+    <text class="ga" x="$X0" y="106" font-size="54" font-weight="800" fill="#ff2e63" letter-spacing="3">ALEXANDER SCHNELL</text>
+    <text class="gb" x="$X0" y="106" font-size="54" font-weight="800" fill="#00e5ff" letter-spacing="3">ALEXANDER SCHNELL</text>
+    <text x="$X0" y="106" font-size="54" font-weight="800" fill="$BLU0" letter-spacing="3" filter="url(#bigglow)">ALEXANDER SCHNELL</text>
   </g></g>
   <rect x="0" y="56" width="3" height="60" fill="$CYN" filter="url(#glow)" opacity="0">
     <animate attributeName="x" dur="$DUR" repeatCount="indefinite" values="$($X0 - 10);$($X0 - 10);$($X0 - 10 + $wipe);$($X0 - 10 + $wipe)" keyTimes="0;$(KT $d0);$(KT $d1);1"/>
