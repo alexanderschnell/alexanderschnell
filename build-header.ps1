@@ -187,6 +187,14 @@ $($script:body)    $cursorSvg
 </svg>
 "@
 
-$out = Join-Path $PSScriptRoot 'terminal-header.svg'
-[IO.File]::WriteAllText($out, $svg, (New-Object Text.UTF8Encoding $false))
+# Content-hashed filename: GitHub caches README images by URL, so every change gets a new name.
+$bytes = (New-Object Text.UTF8Encoding $false).GetBytes($svg)
+$hash = -join ([Security.Cryptography.SHA256]::Create().ComputeHash($bytes)[0..3] | ForEach-Object { $_.ToString('x2') })
+Get-ChildItem $PSScriptRoot -Filter '*header*.svg' | Remove-Item
+$name = "header-$hash.svg"
+$out = Join-Path $PSScriptRoot $name
+[IO.File]::WriteAllBytes($out, $bytes)
+$readme = Join-Path $PSScriptRoot 'README.md'
+$md = [IO.File]::ReadAllText($readme) -replace 'src="\./[^"]*\.svg"', "src=`"./$name`""
+[IO.File]::WriteAllText($readme, $md, (New-Object Text.UTF8Encoding $false))
 "wrote $out  ($([math]::Round((Get-Item $out).Length / 1KB, 1)) KB, timeline ends at $([math]::Round($tEnd,2))s of ${LOOP}s)"
