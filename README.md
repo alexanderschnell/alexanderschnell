@@ -1,12 +1,13 @@
 <p align="center">
-  <img src="./header.svg" alt="Alex Schnell - FSWEP Mainframe Developer at ESDC. Computer Engineering Technology student. Stack: mainframe, Java, C, PHP, JavaScript, CSS." width="100%"/>
+  <img src="./header.svg" alt="Alex Schnell - FSWEP Mainframe Developer at ESDC, writing COBOL and JCL on the mainframe through a 3270 terminal. Also Java, C, PHP, JavaScript, CSS." width="100%"/>
 </p>
 
 ### 👋 Hey, I'm Alex
 
 - 🖥️ **FSWEP Mainframe Developer** @ Employment and Social Development Canada
 - 🎓 Computer Engineering Technology – Computing Science co-op student
-- 🔧 Working from batch jobs to browsers: mainframe, Java, C, PHP and the web
+- 🗄️ Day to day: **COBOL** and **JCL** on the mainframe, worked through a 3270 terminal (TSO, JES batch jobs)
+- 🔧 Outside the mainframe: Java, C, PHP and the web
 
 ### 📌 Projects
 
