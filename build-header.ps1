@@ -12,7 +12,7 @@
 $ErrorActionPreference = 'Stop'
 
 # ---------------- personal config ----------------
-$START_DATE = ''                  # FSWEP role start, 'yyyy-MM-dd'. Empty = hide the UPTIME line.
+$START_DATE = '2025-05-06'                # FSWEP role start, 'yyyy-MM-dd'. Empty = hide the UPTIME line.
 $GH_LOGIN   = if ($env:GITHUB_REPOSITORY_OWNER) { $env:GITHUB_REPOSITORY_OWNER } else { 'alexanderschnell' }
 
 # ---------------- layout config ----------------
