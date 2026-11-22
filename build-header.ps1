@@ -151,7 +151,7 @@ $($script:defs)</defs>
 <g clip-path="url(#win)">
   <rect x="16" y="16" width="968" height="38" fill="#0a1020"/>
   <line x1="16" y1="54" x2="984" y2="54" stroke="#1a2f55"/>
-  <circle cx="44" cy="35" r="6.5" fill="#ff5f57"/><circle cx="66" cy="35" r="6.5" fill="#febc2e"/><circle cx="88" cy="35" r="6.5" fill="#28c840"/>
+  <circle cx="44" cy="35" r="6.5" fill="#ff5f57"/><circle cx="66" cy="35" r="6.5" fill="#febc2e"/><circle cx="88" cy="35" r="6.5" fill="#3d8bff"/>
   <text x="500" y="40" text-anchor="middle" font-size="13" fill="#6f8fbf">TN3270  -  SESSION A  -  MODEL 2  (24 x 80)</text>
   <circle class="dot" cx="890" cy="35" r="4" fill="$GRN" filter="url(#glow)"/>
   <text x="900" y="40" font-size="12" fill="$GRN" letter-spacing="1">ONLINE</text>
@@ -187,6 +187,6 @@ $($script:body)    $cursorSvg
 </svg>
 "@
 
-$out = Join-Path $PSScriptRoot 'header.svg'
+$out = Join-Path $PSScriptRoot 'terminal-header.svg'
 [IO.File]::WriteAllText($out, $svg, (New-Object Text.UTF8Encoding $false))
 "wrote $out  ($([math]::Round((Get-Item $out).Length / 1KB, 1)) KB, timeline ends at $([math]::Round($tEnd,2))s of ${LOOP}s)"
